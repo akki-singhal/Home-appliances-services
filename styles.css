@@ -553,8 +553,8 @@ footer .social-icons a {
     section {
         margin: 60px auto; /* Uniform margin for all sections */
         padding: 20px;
-        width: 90%; /* Adjust as needed */
-        max-width: 1200px; /* Ensure sections don’t stretch too wide */
+        /* width: 90%;  */
+        max-width: 1200px; 
         border-radius: 8px;
         color: rgb(0, 0, 0);
         background-color: #ffe0b2;
