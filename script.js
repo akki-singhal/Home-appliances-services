@@ -7,6 +7,16 @@ function closeModal() {
     document.getElementById('bookingModal').style.display = 'none';
 }
 
+
+// Optional: Close the modal when clicking outside of it
+window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+
+
 // Close the modal when clicking outside of it
 window.onclick = function(event) {
     if (event.target == document.getElementById('bookingModal')) {
@@ -87,27 +97,23 @@ window.addEventListener("scroll", function () {
 });
 
 
-// Toggle Hamburger Menu
-const hamburger = document.getElementById('hamburger');
-const nav = document.querySelector('header nav');
+// haambuer toogle
+const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    nav.classList.toggle('active');
-});
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        hamburger.classList.toggle('active'); // Add this line for hamburger animation
+    });
+
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active'); // Close the menu
+            hamburger.classList.remove('active'); // Reset hamburger animation
+        });
+    });
 
 
-// // Function to change image source based on screen width
-// function changeImageSrc() {
-//     const homeImage = document.getElementById('homeimage');
-//     if (window.innerWidth <= 768) {
-//         homeImage.src = 'Design-1.1/images/washing-machine.png';
-//     } else {
-//         homeImage.src = 'desktop-image.jpg';
-//     }
-// }
 
-// // Call function when the window is resized or when the page loads
-// window.addEventListener('resize', changeImageSrc);
-// window.addEventListener('load', changeImageSrc);
 
