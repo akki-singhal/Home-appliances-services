@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Appliance Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Greeting Pop-Up --> 
+    <div id="greeting" class="greeting">
+        <h1>Welcome!</h1>
+        <p>We’re excited to have you here at our Home Appliance Service. Explore our range of services and let us help you keep your home running smoothly.</p>
+        <a href="#services" class="cta-button" id="explore-button">Explore Services</a>
+    </div>
+    
+    <!-- Header Section -->
+    <header id="navbar">
+        <div class="container">
+            <div class="hamburger" id="hamburger">
+                <!-- <img src="/Design-1.1/images/hamburger.png" alt="="> -->
+                 <span></span>
+                 <span></span>
+                 <span></span>
+            </div>
+            <h1>Home Appliance Services</h1>
+            <!-- Hamburger Icon -->
+    
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#bookingModal" class="cta-button" onclick="bookService()">Book Service</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Book Your Service</h2>
+            <div class="form-wrapper">
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="example@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pincode">Pincode:</label>
+                        <input type="text" id="pincode" name="pincode" placeholder="123456" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Category:</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="washing-machine-repair">Washing Machine Repair</option>
+                            <option value="refrigerator-repair">Refrigerator Repair</option>
+                            <option value="microwave-installation">Microwave Installation</option>
+                            <option value="ac-maintenance">AC Maintenance</option>
+                            <option value="dryer-repair">Dryer Repair</option>
+                            <option value="dishwasher-repair">Dishwasher Repair</option>
+                            <option value="oven-repair">Oven Repair</option>
+                            <option value="coffee-maker-repair">Coffee Maker Repair</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State:</label>
+                        <input type="text" id="state" name="state" placeholder="State" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" placeholder="City" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Full Address:</label>
+                        <textarea id="address" name="address" placeholder="123 Main St, Apt 4B" rows="4" required></textarea>
+                    </div>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Image Section -->
+    <section id="homeimage">
+        <div class="bg_image"></div>
+    </section>
+    
+    <!-- Service Overview Section --> 
+    <section id="services">
+        <h2>Our Services</h2>
+            <div class="service-slider">
+                <!-- Service cards... -->
+                <div class="service-card">
+                    <img src="./images/washing-machine.jpg" alt="Washing Machine Repair">
+                    <h3>Washing Machine Repair</h3>
+                    <p>Expert repair for all brands and models.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/refrigerator.jpg" alt="Refrigerator Repair">
+                    <h3>Refrigerator Repair</h3>
+                    <p>Keep your fridge running optimally.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/microwave.jpg" alt="Microwave Installation">
+                    <h3>Microwave Installation</h3>
+                    <p>Professional installation for your kitchen.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/ac.jpg" alt="AC Maintenance">
+                    <h3>AC Maintenance</h3>
+                    <p>Keep your AC running smoothly.</p>
+                </div>
+                <!-- Additional Services -->
+                <div class="service-card">
+                    <img src="./images/dryer.jpg" alt="Dryer Repair">
+                    <h3>Dryer Repair</h3>
+                    <p>Efficient repair for all types of dryers.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/dishwasher.jpg" alt="Dishwasher Repair">
+                    <h3>Dishwasher Repair</h3>
+                    <p>Quick and reliable dishwasher repair services.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/oven.jpg" alt="Oven Repair">
+                    <h3>Oven Repair</h3>
+                    <p>Professional repair for your kitchen oven.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/coffee-maker.jpg" alt="Coffee Maker Repair">
+                    <h3>Coffee Maker Repair</h3>
+                    <p>Get your coffee maker back in action.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-text">
+            <h1>Reliable Home Appliance Services</h1>
+            <p>Your trusted partner for repair, maintenance, and installation.</p>
+            <button onclick="bookService()">Book a Service</button>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Learn more about our company, our values, and our mission. We are committed to providing top-notch appliance repair and maintenance services to ensure your home appliances run smoothly and efficiently.</p>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2>Our Blog</h2>
+        <article class="blog-post">
+
+            <!-- blog-1 -->
+            <article class="blog-post">
+            <h3>The Importance of Regular Washing Machine Maintenance</h3>
+            <p class="blog-preview">Regular maintenance helps keep your washing machine running efficiently and extends its lifespan.</p>
+            <p class="blog-full-content">
+                Maintaining your washing machine is essential for its longevity and performance. Regularly cleaning the drum, replacing filters, and checking hoses prevent common issues and ensure efficient operation. Simple upkeep tasks can help avoid costly repairs and keep your appliance in top shape.
+            </p>
+            <a href="#" class="read-more" onclick="toggleBlogContent(event)">Read More</a>
+            </article>
+
+            <!-- blog-2 -->
+            <article class="blog-post">
+            <h3>Tips for Improving Refrigerator Efficiency</h3>
+            <p class="blog-preview">Boost your refrigerator's efficiency with these simple tips and save on energy costs.</p>
+            <p class="blog-full-content">
+                Improving your refrigerator’s efficiency involves routine tasks such as cleaning the coils, checking door seals, and adjusting the thermostat. Keeping the fridge well-organized and not overcrowding it also helps maintain optimal cooling performance, reducing energy consumption and lowering utility bills.
+            </p>
+            <a href="#" class="read-more" onclick="toggleBlogContent(event)">Read More</a>
+            </article>
+
+            <!-- blog-3 -->
+            <article class="blog-post">
+            <h3>How to Properly Install a Microwave</h3>
+            <p class="blog-preview">Follow these steps to ensure a safe and efficient microwave installation in your kitchen.</p>
+            <p class="blog-full-content">
+                Proper microwave installation is crucial for both safety and functionality. Measure the space accurately, ensure proper ventilation, and secure electrical connections according to the manufacturer’s instructions. Following these guidelines ensures your microwave operates efficiently and integrates seamlessly into your kitchen.
+            </p>
+            <a href="#" class="read-more" onclick="toggleBlogContent(event)">Read More</a>
+            </article>
+
+            <!-- blog-4 -->
+            <article class="blog-post">
+            <h3>The Benefits of Regular AC Maintenance</h3>
+            <p class="blog-preview">Regular AC maintenance improves performance and extends the lifespan of your cooling system.</p>
+            <p class="blog-full-content">
+                Regular maintenance of your air conditioning system is vital for optimal performance. Cleaning filters, checking refrigerant levels, and inspecting components help prevent breakdowns and improve efficiency. Scheduling annual maintenance ensures your AC runs smoothly and lasts longer, reducing the need for costly repairs.
+            </p>
+            <a href="#" class="read-more" onclick="toggleBlogContent(event)">Read More</a>
+            </article>
+
+            <!-- blog-5 -->
+            <article class="blog-post">
+            <h3>Troubleshooting Common Dryer Problems</h3>
+            <p class="blog-preview">Address common dryer issues with these troubleshooting tips to keep your appliance running smoothly.</p>
+            <p class="blog-full-content">
+                Common dryer problems, such as insufficient heating or unusual noises, can often be resolved with basic troubleshooting. Check the heating element, lint filter, and venting system for issues. Regular maintenance and prompt attention to minor problems help ensure your dryer operates efficiently and effectively.
+            </p>
+            <a href="#" class="read-more" onclick="toggleBlogContent(event)">Read More</a>
+            </article>
+        </article>
+        <!-- Additional blog posts can be added here in the same format -->
+    </section>
+
+    
+    <!-- Customer Reviews Section -->
+    <section id="reviews">
+        <h2>What Our Customers Say</h2>
+        <div class="review-slider">
+            <div class="review active">
+                <p>"Excellent service! My washing machine works perfectly again."</p>
+                <h4>- John Doe</h4>
+            </div>
+            <div class="review">
+                <p>"Quick and professional. Highly recommend!"</p>
+                <h4>- Sarah Lee</h4>
+            </div>
+            <div class="review">
+                <p>"Great experience! The technician was very knowledgeable."</p>
+                <h4>- Adam Smith</h4>
+            </div>
+            <div class="review active">
+                <p>"Excellent service! My washing machine works perfectly again."</p>
+                <h4>- John Doe</h4>
+            </div>
+            <div class="review">
+                <p>"Quick and professional. Highly recommend!"</p>
+                <h4>- Sarah Lee</h4>
+            </div>
+            <div class="review">
+                <p>"Great experience! The technician was very knowledgeable."</p>
+                <h4>- Adam Smith</h4>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- Thank You Section -->
+<section id="thank-you" class="thank-you">
+    <div class="container">
+        <h2>Thank You for Visiting Our Website!</h2>
+        <p>We appreciate your time and interest in our services. If you have any questions or need further assistance, feel free to contact us. We look forward to serving you!</p>
+        <a href="#contact" class="cta-button">Contact Us</a>
+    </div>
+</section>
+
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2024 Home Appliance Services. All rights reserved.</p>
+            <ul class="social-icons">
+                <li><a href="#"><img src="./images/facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="./images/x.png" alt="Twitter/X"></a></li>
+                <li><a href="#"><img src="./images/instagram.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script>
+        // Scroll to top on page load
+        window.addEventListener('load', function() {
+            window.scrollTo(0, 0);
+        });
+    </script>
+</body>
+</html>
