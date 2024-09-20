@@ -297,11 +297,11 @@ footer .social-icons a {
     position: fixed;
     z-index: 1;
     left: 0;
-    top: 0;
+    top: 30;
     width: 100%;
-    height: 100%;
+    height: 70%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: auto;
 }
 
 .modal-content {
@@ -397,7 +397,7 @@ footer .social-icons a {
     font-family: 'Arial', sans-serif;
     color: #fff;
     border: 1px solid #fff;
-    width: 90%;
+    width: 70%;
     max-width: 500px;
 }
 
@@ -499,9 +499,64 @@ footer .social-icons a {
     transition: all 0.3s ease-in-out;
 }
 
-/* Responsive Menu */
+/* responsive menu for mobile view  */
+
+@media (max-width: 480px) {
+    /* General section styles */
+    section {
+        margin: 20px auto; /* Uniform margin for all sections */
+        padding: 15px; /* Adjusted padding for smaller screens */
+        width: 90%; /* Ensure all sections fit within the viewport */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    /* Specific adjustments for each section */
+    #about {
+        padding: 20px;  /* Padding for the about section */
+    }
+
+    #services {
+        padding: 20px; /* Padding for services section */
+        background-color: #ffffffb4; /* Retain background color */
+    }
+
+    #blog {
+        padding: 20px; /* Padding for blog section */
+    }
+
+    #reviews {
+        padding: 20px; /* Padding for reviews section */
+    }
+
+    #thank-you {
+        padding: 20px; /* Padding for thank-you section */
+    }
+
+    /* Font sizes for better readability */
+    #about h2,
+    #services h2,
+    #blog h2,
+    #reviews h2,
+    #thank-you h2 {
+        font-size: 1.8rem; /* Adjust heading size for mobile */
+    }
+
+    #about p,
+    #services p,
+    #blog p,
+    #reviews p,
+    #thank-you p {
+        font-size: 1rem;  /* Adjust paragraph font size */
+        line-height: 1.4; /* Better line spacing for mobile */
+    }
+
+
+}
+
+/* responsive menu for tablet view  */
 
 @media (max-width: 768px) {
+    
     header .container {
         justify-content: space-between;
     }
@@ -519,15 +574,22 @@ footer .social-icons a {
         background-color: #333;
         position: absolute;
         top: 60px;
-        right: 0;
+        right: -200px; /* Start off-screen to the right */
         width: 200px;
         height: calc(100vh - 60px);
         margin: 0;
         padding: 20px;
-        display: none;
-        z-index: 999;
+        display: flex; /* Use flex to align items */
+        opacity: 0; /* Start with opacity 0 */
+        transform: translateY(-20px); /* Slide in effect */
+        transition: right 0.3s ease, opacity 0.3s ease; /* Smooth transition */
     }
-
+    
+    nav.active ul {
+        right: 0; /* Slide in to position */
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Move to original position */
+    }
 
     header nav ul li {
         margin: 20px 0;
@@ -536,19 +598,6 @@ footer .social-icons a {
     .hamburger {
         display: flex;
     }
-
-    nav.active ul {
-        display: flex;
-    }
-
-    /* section {
-        margin: 20px auto;
-        padding: 2px;
-        width: 80%; 
-        border-radius: 8px;
-        color: rgb(0, 0, 0);
-        background-color: #ffe0b2;
-    } */
 
     section {
         margin: 60px auto; /* Uniform margin for all sections */
@@ -559,9 +608,8 @@ footer .social-icons a {
         color: rgb(0, 0, 0);
         background-color: #ffe0b2;
     }
-    
-    
 
+    
 }
 
 /* Hamburger animation when active */
