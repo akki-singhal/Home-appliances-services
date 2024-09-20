@@ -1,28 +1,20 @@
 // JavaScript for modal functionality
 function bookService() {
-    document.getElementById('bookingModal').style.display = 'block';
+    const modal = document.getElementById('bookingModal');
+    modal.style.display = 'block';
+
+    // Add the animation class to the form
+    const bookingForm = document.getElementById('bookingForm'); // Ensure your form has this ID
+    bookingForm.classList.add('form-appear');
 }
 
+// Ensure to remove the class when closing the modal
 function closeModal() {
+    const bookingForm = document.getElementById('bookingForm');
+    bookingForm.classList.remove('form-appear'); // Remove the animation class
     document.getElementById('bookingModal').style.display = 'none';
 }
 
-
-// Optional: Close the modal when clicking outside of it
-window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-});
-
-
-
-// Close the modal when clicking outside of it
-window.onclick = function(event) {
-    if (event.target == document.getElementById('bookingModal')) {
-        closeModal();
-    }
-}
 
 // Show and hide greeting pop-up
 window.addEventListener('load', () => {
@@ -78,8 +70,7 @@ document.querySelector('.cta-button').addEventListener('click', function(e) {
     targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
-// iske neeche ka code maine likha hai
-
+// hiding header when scroll up and shows when scroll dwon
 let lastScrollTop = 0;
 const navbar = document.getElementById("navbar");
 
@@ -97,7 +88,7 @@ window.addEventListener("scroll", function () {
 });
 
 
-// haambuer toogle
+// hambuerger toogle
 const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('nav');
 
@@ -113,7 +104,5 @@ const hamburger = document.querySelector('.hamburger');
             hamburger.classList.remove('active'); // Reset hamburger animation
         });
     });
-
-
 
 
