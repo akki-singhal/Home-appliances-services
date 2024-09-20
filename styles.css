@@ -295,7 +295,7 @@ footer .social-icons a {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 30;
     width: 100%;
@@ -316,6 +316,7 @@ footer .social-icons a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 .close {
     color: #aaa;
     float: right;
@@ -331,6 +332,24 @@ footer .social-icons a {
 }
 
 /* Form Styles */
+
+/* Add this to your existing CSS */
+.form-appear {
+    animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%); /* Start from above the viewport */
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: translateY(0); /* End at the normal position */
+        opacity: 1; /* End visible */
+    }
+}
+
+
 #bookingForm {
     display: flex;
     flex-direction: column;
@@ -550,6 +569,14 @@ footer .social-icons a {
         line-height: 1.4; /* Better line spacing for mobile */
     }
 
+    .blog-preview {
+        white-space: wrap; 
+    }
+
+    .modal-content {
+        width: 60%; /* Take 60% of the screen width */
+        margin: 20% auto; /* 20% margin from both sides */
+    }
 
 }
 
@@ -607,6 +634,15 @@ footer .social-icons a {
         border-radius: 8px;
         color: rgb(0, 0, 0);
         background-color: #ffe0b2;
+    }
+
+    .blog-preview {
+        white-space: wrap; 
+    }
+
+    .modal-content {
+        width: 60%; /* Take 60% of the screen width */
+        margin: 20% auto; /* 20% margin from both sides */
     }
 
     
